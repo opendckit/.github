@@ -1,0 +1,130 @@
+# Contributing to OpenDCKit
+
+This file is the companion to the [OpenDCKit Technical Charter](). Where the charter says a
+thing is documented "in the CONTRIBUTING file," this is that file.
+
+The community owns this document. Changes to it are proposed as pull requests and
+approved by the TSC.
+
+> **Draft.** The maintainer list in [MAINTAINERS.md](MAINTAINERS.md) is empty and needs to be
+> filled in and agreed by the founding group before the charter is adopted, because the charter
+> seats the initial TSC from it. Links marked TBD are created during project onboarding.
+
+## Code of conduct
+
+Everyone participating in OpenDCKit is expected to follow the
+[LF Projects Code of Conduct](https://lfprojects.org/policies/code-of-conduct/).
+Report concerns to the TSC chair or to conduct@lfprojects.org.
+
+## Roles
+
+**Contributor.** Anyone who contributes code, documentation, tests, reviews, or other
+technical artifacts. No approval or paperwork is required to start. Open an issue or a pull
+request.
+
+**Maintainer.** A contributor who has earned commit access to the repository. Maintainers
+review and merge pull requests, triage issues, and are responsible for the health of the
+areas they look after.
+
+**TSC.** The Technical Steering Committee holds technical oversight of the project. Its
+voting members are the active maintainers, one vote each.
+
+## Maintainers
+
+The maintainer list lives in [MAINTAINERS.md](MAINTAINERS.md) and is incorporated into this
+file by reference. Active maintainers in that file are the voting members of the TSC.
+
+Maintainers are listed as individuals, not as company seats. A maintainer who changes
+employer keeps their role.
+
+### Becoming a maintainer
+
+Any contributor with a sustained track record of quality contributions and reviews may be
+nominated. Nomination is an issue opened by an existing maintainer, and the change takes a
+majority vote of the TSC, recorded by a pull request against MAINTAINERS.md. There is no
+fixed contribution count; judgment sits with the TSC.
+
+### Stepping down and removal
+
+Maintainers may step down at any time by opening a pull request against MAINTAINERS.md. A
+maintainer who has been inactive for an extended period may be moved to emeritus by a
+majority vote of the TSC, and can be reinstated the same way.
+
+## How to contribute
+
+1. Open an issue first for anything larger than a bug fix, so the design gets discussed
+   before the code is written.
+2. Fork the repository and work on a branch.
+3. Keep pull requests focused. One logical change per pull request reviews faster than a
+   large mixed one.
+4. Include tests for behavior changes, and update documentation in the same pull request.
+5. Sign off every commit (see below).
+6. Open the pull request and respond to review comments.
+
+### Sign-off (DCO)
+
+Every commit must carry a Developer Certificate of Origin sign-off. Use `git commit -s`,
+which appends a line like:
+
+```
+Signed-off-by: Jane Doe <jane@example.com>
+```
+
+By signing off you are certifying the statement at <https://developercertificate.org>. The
+name and email must match the commit author. There is no CLA to sign.
+
+If you forget, `git commit --amend -s` fixes the last commit, and
+`git rebase --signoff` fixes a branch.
+
+### Review and merge
+
+Pull requests need approval from at least one maintainer other than the author before
+merging. Maintainers do not merge their own pull requests without another maintainer's
+approval. If a reviewer requests changes, that objection is resolved before the pull
+request merges rather than outvoted.
+
+Disagreements that reviewers cannot resolve between themselves go to the TSC.
+
+## Licensing
+
+Code contributions are made under the [Apache License 2.0](LICENSE). Documentation is made
+available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Contributors
+retain copyright in their contributions; nothing is assigned to the project.
+
+Add an SPDX identifier to new source files:
+
+```
+// SPDX-License-Identifier: Apache-2.0
+```
+
+Any dependency added must be compatible with Apache-2.0. Use of a different license for an
+inbound or outbound contribution requires an exception approved by a two-thirds vote of the
+TSC, as set out in the charter.
+
+## Reporting a security issue
+
+Do not open a public issue for a suspected vulnerability. Report it to TBD. The community
+will acknowledge the report and coordinate disclosure with the reporter.
+
+## Meetings and communication
+
+- Chat: <https://linuxfoundation.zulipchat.com>
+- Meetings: all public meetings are on the
+  [Community Meeting Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/opendckit?view=week).
+  To request a new meeting, email <support@lfnetworking.org> with the meeting name, its
+  committee, working group, or SIG (if any), the cadence, and the time, including the time
+  zone (UTC, PT, etc.)
+- Mailing list: TBD
+- Issues and pull requests: <https://github.com/opendckit>
+- Infrastructure and tooling requests: <support@lfnetworking.org>
+
+Technical discussion happens in the open. Decisions made in a meeting or a chat are
+summarized back into the relevant issue or pull request so that people who were not present
+can follow along.
+
+## TSC decision making
+
+The project works by consensus. Where a vote is needed, it is one vote per TSC voting
+member, and quorum is half of the voting members. Most decisions carry on a majority; charter
+amendments and license exceptions need two thirds of the entire TSC. Details are in the
+charter, which governs if this summary and the charter ever disagree.
