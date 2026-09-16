@@ -1,0 +1,249 @@
+# Contributing to OpenDCKit
+
+Thanks for your interest in OpenDCKit. Everything the project does happens in the open and
+anyone is welcome to take part.
+
+This file is the CONTRIBUTING file referred to in the
+[OpenDCKit Technical Charter](). The charter gives it a specific job: it documents the
+project's roles, and it sets out who the Maintainers are, which in turn determines the
+voting membership of the Technical Steering Committee. The TSC may amend this file to
+implement its own policies, within the bounds the charter sets.
+
+> **Draft.** The Maintainers table is empty and needs to be agreed by the founding group
+> before the charter is adopted. Links and contacts marked TBD are set up during onboarding.
+
+## Code of conduct
+
+The [LF Projects Code of Conduct](https://lfprojects.org/policies/code-of-conduct/) applies
+to everyone participating in OpenDCKit, unless and until the TSC adopts a project-specific
+code of conduct with the approval of the Series Manager. Report concerns to the TSC chair or
+to conduct@lfprojects.org.
+
+## Roles
+
+The charter defines Contributors and Maintainers, and allows the TSC to document additional
+roles here. OpenDCKit uses three.
+
+**Contributors** are anyone in the technical community who contributes code, documentation,
+or other technical artifacts to the project. No approval or paperwork is needed to start.
+Participation is open to anyone who abides by the charter.
+
+**Maintainers** are Contributors who have earned the ability to commit to a project
+repository. They review and merge pull requests, triage issues, and look after the health of
+the areas they cover. Maintainer status is granted per repository, and each repository lists
+its maintainers in its `MAINTAINERS.md` file.
+
+**TSC voting members** sit on the Technical Steering Committee, the technical governing body
+of the project, responsible for all technical oversight. The TSC is separate from the LF
+Networking Governing Board, which handles budget, marketing, and other non-technical
+matters. TSC voting members are drawn from the Maintainers, and the roster is below.
+
+Being a Maintainer does not make someone a TSC voting member. Maintainer status is a
+prerequisite for a TSC seat, not the seat itself, and most Maintainers will not hold one.
+
+The charter's default is that every Maintainer is a TSC voting member, and it allows the
+project to use a different approach so long as that approach is documented in this file.
+The separation described here is that documented approach.
+
+## TSC voting members
+
+| Name | GitHub | Affiliation | Seated |
+| ---- | ------ | ----------- | ------ |
+|      |        |             |        |
+
+TSC chair: TBD. The chair presides over TSC meetings and serves until resignation or
+replacement by the TSC. The chair, or another TSC member the TSC designates, is the primary
+communication contact between the project and LF Networking.
+
+Seats are held by individuals, not by companies. A member who changes employer keeps their
+seat.
+
+### Joining the TSC
+
+A Maintainer may be seated on the TSC by majority approval of the TSC. Nomination is a pull
+request against this file, opened by an existing TSC voting member.
+
+*Eligibility beyond Maintainer status, and whether seats are filled by appointment or
+election: to be defined by the TSC. See "Policies for the TSC to define" below.*
+
+### Leaving the TSC
+
+A member may step down at any time by pull request. A member may be removed by majority
+approval of the TSC. Losing Maintainer status in every repository ends eligibility for the
+seat.
+
+*Grounds for removal, inactivity thresholds, and emeritus status: to be defined by the TSC.*
+
+## Becoming a Maintainer
+
+Maintainers are added per repository, and the decision starts with the people who maintain
+that repository.
+
+1. **Nomination.** An existing Maintainer of the repository opens a pull request adding the
+   Contributor to that repository's `MAINTAINERS.md`, with a short case for the nomination.
+2. **Repository vote.** The existing Maintainers of that repository vote. A majority of them
+   carries the nomination. This is where the substantive decision is made; they are the
+   people who know the candidate's work.
+3. **TSC approval.** The carried nomination goes to the TSC, which approves it by majority
+   vote as the charter requires. This is a sign-off rather than a re-run of the decision.
+   The TSC is expected to approve a nomination the repository has carried, and would
+   normally only decline for a project-level reason such as a code of conduct matter or a
+   conflict with an org-wide policy. A declined nomination comes back to the repository with
+   the reason.
+4. **Merge.** Once the TSC has approved, the pull request merges and commit rights are
+   granted.
+
+*How the repository vote is run and recorded, any quorum for it, and whether the TSC may
+delegate its approval: to be defined by the TSC.*
+
+### New repositories
+
+When the TSC creates a repository, the proposal may include an initial list of Maintainers.
+Approving the repository approves that list, and no separate nomination round is needed. The
+list lands in the new repository's `MAINTAINERS.md` when it is created. If a repository is
+created without one, the TSC appoints the initial Maintainers.
+
+### Leaving
+
+A Maintainer may step down at any time by pull request against that repository's
+`MAINTAINERS.md`. Removal follows the same path as a nomination: a majority of the
+repository's Maintainers, then approval by the TSC.
+
+*Promotion requirements, inactivity thresholds, and emeritus status: to be defined by the
+TSC.*
+
+## How to contribute
+
+1. Open an issue first for anything larger than a bug fix, so the design is discussed before
+   the code is written.
+2. Fork the repository and work on a branch.
+3. Keep pull requests focused. One logical change per pull request reviews faster than a
+   large mixed one.
+4. Include tests for behavior changes, and update documentation in the same pull request.
+5. Sign off every commit (see below).
+6. Open the pull request and respond to review comments.
+
+### Sign-off (DCO)
+
+Every commit must carry a Developer Certificate of Origin sign-off. Use `git commit -s`,
+which appends a line like:
+
+```
+Signed-off-by: Jane Doe <jane@example.com>
+```
+
+By signing off you certify the statement at <https://developercertificate.org>. The name and
+email must match the commit author. There is no CLA to sign.
+
+If you forget, `git commit --amend -s` fixes the last commit and `git rebase --signoff`
+fixes a branch.
+
+### Review and merge
+
+Pull requests need approval from at least one repository maintainer other than the author.
+Repository maintainers do not merge their own pull requests without another maintainer's
+approval. If a reviewer requests changes, that objection is resolved before merge rather
+than outvoted.
+
+Disagreements the repository maintainers cannot resolve among themselves go to the TSC.
+
+## TSC decision making
+
+The project aims to operate as a consensus-based community. Where a decision requires a
+vote, it is one vote per voting member. Quorum is at least half of all voting members. At a
+meeting with quorum, decisions carry on a majority of those in attendance. Electronic votes
+without a meeting require a majority of all voting members. License exceptions and charter
+amendments require a two-thirds vote of the entire TSC. The charter governs if this summary
+and the charter ever disagree.
+
+TSC meetings are open to the public and may be held electronically, by teleconference, or in
+person.
+
+These are the charter's baseline mechanics. Eligibility to vote, limits on how many seats
+one company may hold, term lengths, and similar matters are not addressed by the charter and
+are for the TSC to define here.
+
+## Licensing
+
+Code contributions are made under the [Apache License 2.0](LICENSE), the Project License.
+Documentation is made available under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Contributors retain copyright in
+their contributions; nothing is assigned to the project.
+
+Add an SPDX identifier to new source files:
+
+```
+// SPDX-License-Identifier: Apache-2.0
+```
+
+Any dependency added must be compatible with the Project License. Use of an alternative
+license for an inbound or outbound contribution requires an exception approved by a
+two-thirds vote of the entire TSC.
+
+## Reporting a security issue
+
+Do not open a public issue for a suspected vulnerability. Report it to TBD. The community
+will acknowledge the report and coordinate disclosure with the reporter.
+
+## Where the community talks
+
+- Chat: <https://linuxfoundation.zulipchat.com>
+- Meetings: all public meetings are on the
+  [Community Meeting Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/opendckit?view=week).
+  To request a new meeting, email <support@lfnetworking.org> with the meeting name, its
+  committee, working group, or SIG (if any), the cadence, and the time, including the time
+  zone (UTC, PT, etc.)
+- Mailing list: TBD
+- Issues and pull requests: <https://github.com/opendckit>
+- Infrastructure and tooling requests: <support@lfnetworking.org>
+
+Technical discussion happens in the open. Decisions made in a meeting or a chat are
+summarized back into the relevant issue or pull request so that people who were not present
+can follow along.
+
+## Policies for the TSC to define
+
+The charter sets baseline voting mechanics and leaves the rest to this file. The following
+are placeholders for the TSC to review and decide. Until the TSC adopts a policy, none of
+these constraints apply beyond what the charter itself requires.
+
+**Maintainer eligibility.** What qualifies a Contributor for nomination. Whether there are
+minimum contribution, tenure, or review requirements, and whether they are objective
+thresholds or TSC judgment.
+
+**Company and affiliate caps.** Whether a limit applies to how many TSC voting seats a
+single company and its affiliates may hold, what the limit is, and how a breach is resolved
+when it arises through an affiliation change rather than a new seating.
+
+**Terms and renewal.** Whether Maintainer seats are held until resignation or removal, or
+for fixed terms with re-seating.
+
+**Chair election.** How the chair is nominated and elected, term length, whether a vice
+chair exists, and how a mid-term vacancy is filled.
+
+**Attendance and inactivity.** Whether missed meetings or a period of inactivity trigger
+loss of voting status, and how a member is reinstated.
+
+**Conflicts of interest.** Whether recusal is expected on matters where a member or their
+employer has a direct commercial interest.
+
+**Voting practice.** How votes are called and recorded, how long an electronic vote stays
+open, whether abstentions count toward quorum, and how ties are handled.
+
+**Delegation of maintainer approval.** Whether the TSC keeps approval of new Maintainers or
+delegates it to the existing Maintainers of each repository.
+
+**TSC size and seating.** How many seats the TSC has, whether seats are appointed by the TSC
+or elected by the Maintainers, and how the initial roster is refreshed after inception.
+
+**Working groups and SIGs.** How they are proposed, chartered, and wound down, and what
+authority their leads hold.
+
+**Releases and security.** Release cadence and sign-off, supported versions, and the
+vulnerability disclosure process.
+
+## Changing this file
+
+The TSC may amend this file by the voting rules above, including adjusting roles, setting
+requirements for promotion, and documenting an alternative approach for determining TSC
+voting membership, as the charter permits. Amendments are made by pull request.
