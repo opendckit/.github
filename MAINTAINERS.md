@@ -10,7 +10,8 @@ seat.
 
 Every repository in the OpenDCKit organization keeps its own copy of this file.
 
-> **Draft.** Fill in the table and remove this notice before the repository goes public.
+> **Draft.** This repository holds the project's governance files. Its initial maintainers
+> are approved by the TSC, and this notice comes out once the table is filled in.
 
 ## Active
 
