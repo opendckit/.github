@@ -4,13 +4,12 @@ Thanks for your interest in OpenDCKit. Everything the project does happens in th
 anyone is welcome to take part.
 
 This file is the CONTRIBUTING file referred to in the
-[OpenDCKit Technical Charter](). The charter gives it a specific job: it documents the
+[OpenDCKit Technical Charter](https://github.com/opendckit/governance/tree/main/charter). The charter gives it a specific job: it documents the
 project's roles, and it sets out who the Maintainers are, which in turn determines the
 voting membership of the Technical Steering Committee. The TSC may amend this file to
 implement its own policies, within the bounds the charter sets.
 
-> **Draft.** The Maintainers table is empty and needs to be agreed by the founding group
-> before the charter is adopted. Links and contacts marked TBD are set up during onboarding.
+> **Draft.** Links and contacts marked TBD are set up during onboarding.
 
 ## Code of conduct
 
@@ -36,7 +35,9 @@ its maintainers in its `MAINTAINERS.md` file.
 **TSC voting members** sit on the Technical Steering Committee, the technical governing body
 of the project, responsible for all technical oversight. The TSC is separate from the LF
 Networking Governing Board, which handles budget, marketing, and other non-technical
-matters. TSC voting members are drawn from the Maintainers, and the roster is below.
+matters. TSC voting members are drawn from the Maintainers. The roster, chair, and term
+dates are kept in [`TSC.md`](https://github.com/opendckit/governance/blob/main/TSC.md) in
+the governance repository.
 
 Being a Maintainer does not make someone a TSC voting member. Maintainer status is a
 prerequisite for a TSC seat, not the seat itself, and most Maintainers will not hold one.
@@ -45,32 +46,44 @@ The charter's default is that every Maintainer is a TSC voting member, and it al
 project to use a different approach so long as that approach is documented in this file.
 The separation described here is that documented approach.
 
+**At inception.** The initial TSC voting members are the people listed in
+[`TSC.md`](https://github.com/opendckit/governance/blob/main/TSC.md) when the charter is
+adopted. Under Section 2.b of the charter they are seated as the
+project's initial Maintainers for TSC purposes, whether or not they hold commit rights in a
+repository yet. They are appointed because the project does not yet have a Maintainer
+community to elect a TSC, and they serve until the first TSC election. The requirement that
+a TSC voting member be a repository Maintainer applies to seats filled after inception.
+
 ## TSC voting members
 
-| Name | GitHub | Affiliation | Seated |
-| ---- | ------ | ----------- | ------ |
-|      |        |             |        |
-
-TSC chair: TBD. The chair presides over TSC meetings and serves until resignation or
-replacement by the TSC. The chair, or another TSC member the TSC designates, is the primary
-communication contact between the project and LF Networking.
+The current roster and chair are listed in
+[`TSC.md`](https://github.com/opendckit/governance/blob/main/TSC.md).
 
 Seats are held by individuals, not by companies. A member who changes employer keeps their
 seat.
 
 ### Joining the TSC
 
-A Maintainer may be seated on the TSC by majority approval of the TSC. Nomination is a pull
-request against this file, opened by an existing TSC voting member.
+After inception, TSC seats are filled by election. The Maintainers are the electorate: at
+each TSC election, Maintainers nominate candidates from among the Maintainers, including
+themselves, and then vote. The sitting TSC does not appoint its own members.
 
-*Eligibility beyond Maintainer status, and whether seats are filled by appointment or
-election: to be defined by the TSC. See "Policies for the TSC to define" below.*
+The Linux Foundation administers each election as a neutral party. LF staff open the
+nomination period, run the vote, and record the result. The Maintainers nominate and vote.
+Once an election closes, the result is recorded by pull request in the
+[governance repository](https://github.com/opendckit/governance), updating `TSC.md` and
+adding the election record under `elections/`.
+
+*Number of seats, term length, election cadence and the date of the first election, how the
+electorate is counted (for example one vote per person however many repositories they
+maintain), the voting method, and how a mid-term vacancy is filled: to be defined by the TSC
+before the first election. See "Policies for the TSC to define" below.*
 
 ### Leaving the TSC
 
-A member may step down at any time by pull request. A member may be removed by majority
-approval of the TSC. Losing Maintainer status in every repository ends eligibility for the
-seat.
+A member may step down at any time by pull request against `TSC.md`. A member may be
+removed by a vote of the TSC under the decision-making rules below. After inception,
+losing Maintainer status in every repository ends eligibility for the seat.
 
 *Grounds for removal, inactivity thresholds, and emeritus status: to be defined by the TSC.*
 
@@ -133,7 +146,11 @@ Signed-off-by: Jane Doe <jane@example.com>
 ```
 
 By signing off you certify the statement at <https://developercertificate.org>. The name and
-email must match the commit author. There is no CLA to sign.
+email must match the commit author.
+
+<!-- TODO (LF staff): confirm whether a contributor license agreement will be required in
+addition to the DCO sign-off. The draft charter (Section 7) specifies DCO only, so a CLA
+needs confirming with LF before it is documented here. -->
 
 If you forget, `git commit --amend -s` fixes the last commit and `git rebase --signoff`
 fixes a branch.
@@ -180,6 +197,16 @@ Any dependency added must be compatible with the Project License. Use of an alte
 license for an inbound or outbound contribution requires an exception approved by a
 two-thirds vote of the entire TSC.
 
+Code brought into the project, including existing code imported into a new repository, goes
+through the Linux Foundation license and security scan first. Any dependency that downstream
+users need for the software to work must pass the same scan. Dependencies used only for
+building or testing are reviewed but held to a lighter standard. Do not commit prebuilt
+third-party binaries; consume them as declared dependencies instead.
+
+Original contributors are credited in the commit history and, where appropriate, in a
+NOTICE file. Project documentation describes OpenDCKit as a community project and does not
+describe it as owned by any one company.
+
 ## Reporting a security issue
 
 Do not open a public issue for a suspected vulnerability. Report it to TBD. The community
@@ -187,13 +214,19 @@ will acknowledge the report and coordinate disclosure with the reporter.
 
 ## Where the community talks
 
-- Chat: <https://linuxfoundation.zulipchat.com>
+- Chat: <https://linuxfoundation.zulipchat.com>, in `#lfn-opendckit-discussion`,
+  `#lfn-opendckit-support` and `#lfn-opendckit-tsc`. Sign in with your LF ID.
+- TSC meeting: weekly on Mondays at 07:00 America/Los_Angeles. Agendas and minutes are on
+  the [OpenDCKit wiki](https://lf-networking.atlassian.net/wiki/spaces/OpenDCKit/overview).
 - Meetings: all public meetings are on the
   [Community Meeting Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/opendckit?view=week).
   To request a new meeting, email <support@lfnetworking.org> with the meeting name, its
   committee, working group, or SIG (if any), the cadence, and the time, including the time
   zone (UTC, PT, etc.)
-- Mailing list: TBD
+- Mailing list: <https://groups.linuxfoundation.org/g/opendckit-formation> until the project
+  lists are created
+- LF Networking: OpenDCKit coordinates with other LF Networking projects through the
+  [LFN Technical Advisory Council](https://lf-networking.atlassian.net/wiki/spaces/LN/pages/15633036/TAC+Technical+Advisory+Council).
 - Issues and pull requests: <https://github.com/opendckit>
 - Infrastructure and tooling requests: <support@lfnetworking.org>
 
@@ -203,44 +236,37 @@ can follow along.
 
 ## Policies for the TSC to define
 
-The charter sets baseline voting mechanics and leaves the rest to this file. The following
-are placeholders for the TSC to review and decide. Until the TSC adopts a policy, none of
-these constraints apply beyond what the charter itself requires.
+The charter sets baseline voting mechanics and leaves the rest to the TSC. Until the TSC
+adopts a policy, none of these constraints apply beyond what the charter itself requires.
+
+These belong in this file, because they govern contributing and how Maintainers and TSC
+voting members are determined:
 
 **Maintainer eligibility.** What qualifies a Contributor for nomination. Whether there are
 minimum contribution, tenure, or review requirements, and whether they are objective
 thresholds or TSC judgment.
 
-**Company and affiliate caps.** Whether a limit applies to how many TSC voting seats a
-single company and its affiliates may hold, what the limit is, and how a breach is resolved
-when it arises through an affiliation change rather than a new seating.
-
-**Terms and renewal.** Whether Maintainer seats are held until resignation or removal, or
-for fixed terms with re-seating.
-
-**Chair election.** How the chair is nominated and elected, term length, whether a vice
-chair exists, and how a mid-term vacancy is filled.
-
-**Attendance and inactivity.** Whether missed meetings or a period of inactivity trigger
-loss of voting status, and how a member is reinstated.
-
-**Conflicts of interest.** Whether recusal is expected on matters where a member or their
-employer has a direct commercial interest.
-
-**Voting practice.** How votes are called and recorded, how long an electronic vote stays
-open, whether abstentions count toward quorum, and how ties are handled.
-
 **Delegation of maintainer approval.** Whether the TSC keeps approval of new Maintainers or
 delegates it to the existing Maintainers of each repository.
 
-**TSC size and seating.** How many seats the TSC has, whether seats are appointed by the TSC
-or elected by the Maintainers, and how the initial roster is refreshed after inception.
+**Maintainer terms.** Whether repository Maintainers serve until resignation or removal, or
+for fixed terms with renewal.
 
-**Working groups and SIGs.** How they are proposed, chartered, and wound down, and what
-authority their leads hold.
+**TSC elections.** How many voting seats the TSC has, the length of a term and whether terms
+are staggered, how often elections are held and when the first one takes place, how the
+Maintainer electorate is counted, the voting method, and whether a mid-term vacancy is
+filled by special election or left open until the next election. These need to be settled
+before the first election, which ends the terms of the members appointed at inception.
 
-**Releases and security.** Release cadence and sign-off, supported versions, and the
-vulnerability disclosure process.
+**Company and affiliate caps.** Whether a limit applies to how many TSC voting seats a
+single company and its affiliates may hold, what the limit is, and how a breach is resolved
+when it arises through an affiliation change rather than a new seating. The founding group
+has proposed a cap of two voting seats per company, moved here from an earlier charter
+draft, for the TSC to confirm and word.
+
+Policies on how the TSC itself operates, such as chair election, voting practice, attendance,
+conflicts of interest, working groups, and releases, are kept in the
+[governance repository](https://github.com/opendckit/governance/tree/main/policies).
 
 ## Changing this file
 
