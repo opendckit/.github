@@ -74,10 +74,12 @@ Once an election closes, the result is recorded by pull request in the
 [governance repository](https://github.com/opendckit/governance), updating `TSC.md` and
 adding the election record under `elections/`.
 
-*Number of seats, term length, election cadence and the date of the first election, how the
-electorate is counted (for example one vote per person however many repositories they
-maintain), the voting method, and how a mid-term vacancy is filled: to be defined by the TSC
-before the first election. See "Policies for the TSC to define" below.*
+The TSC has 9 voting seats, each held for a 1-year term, with elections held annually. The
+electorate is every Maintainer across the project, one vote per person however many
+repositories they maintain, and elections are run through LFX. *The date of the first
+election, whether terms are staggered, and how a mid-term vacancy is filled: still to be
+defined by the TSC. See the [Formation Status](https://lf-networking.atlassian.net/wiki/spaces/OpenDCKit/pages/1534132241)
+wiki page for open items and their status.*
 
 ### Leaving the TSC
 
@@ -85,9 +87,17 @@ A member may step down at any time by pull request against `TSC.md`. A member ma
 removed by a vote of the TSC under the decision-making rules below. After inception,
 losing Maintainer status in every repository ends eligibility for the seat.
 
-*Grounds for removal, inactivity thresholds, and emeritus status: to be defined by the TSC.*
+A TSC member who is unreachable for 3 months loses voting status and moves to emeritus until
+the next election. A member who gives notice of a planned absence (sabbatical, medical
+leave, and the like) may appoint a proxy instead and keeps their seat. *Grounds for removal
+other than inactivity, and how a member is reinstated short of an election: to be defined by
+the TSC.*
 
 ## Becoming a Maintainer
+
+A Contributor is eligible for nomination after 10 measurable contributions to the project
+(code, or substantive engagement such as code review). Time in the community is not a
+factor; what counts is recorded contribution.
 
 Maintainers are added per repository, and the decision starts with the people who maintain
 that repository.
@@ -122,8 +132,11 @@ A Maintainer may step down at any time by pull request against that repository's
 `MAINTAINERS.md`. Removal follows the same path as a nomination: a majority of the
 repository's Maintainers, then approval by the TSC.
 
-*Promotion requirements, inactivity thresholds, and emeritus status: to be defined by the
-TSC.*
+Maintainers serve until they resign or are removed; there is no fixed term. A Maintainer who
+is unreachable for 3 months becomes eligible for replacement and moves to emeritus, losing
+commit rights until reinstated; a planned absence may be covered by a proxy instead, the
+same as for TSC members. *Promotion requirements beyond the contribution threshold above,
+and emeritus reinstatement: to be defined by the TSC.*
 
 ## How to contribute
 
@@ -176,9 +189,9 @@ and the charter ever disagree.
 TSC meetings are open to the public and may be held electronically, by teleconference, or in
 person.
 
-These are the charter's baseline mechanics. Eligibility to vote, limits on how many seats
-one company may hold, term lengths, and similar matters are not addressed by the charter and
-are for the TSC to define here.
+These are the charter's baseline mechanics. The electorate, company seat cap, term lengths,
+and similar matters the charter leaves open are defined above; anything not yet addressed is
+for the TSC to define by amending this file.
 
 ## Licensing
 
@@ -233,40 +246,6 @@ will acknowledge the report and coordinate disclosure with the reporter.
 Technical discussion happens in the open. Decisions made in a meeting or a chat are
 summarized back into the relevant issue or pull request so that people who were not present
 can follow along.
-
-## Policies for the TSC to define
-
-The charter sets baseline voting mechanics and leaves the rest to the TSC. Until the TSC
-adopts a policy, none of these constraints apply beyond what the charter itself requires.
-
-These belong in this file, because they govern contributing and how Maintainers and TSC
-voting members are determined:
-
-**Maintainer eligibility.** What qualifies a Contributor for nomination. Whether there are
-minimum contribution, tenure, or review requirements, and whether they are objective
-thresholds or TSC judgment.
-
-**Delegation of maintainer approval.** Whether the TSC keeps approval of new Maintainers or
-delegates it to the existing Maintainers of each repository.
-
-**Maintainer terms.** Whether repository Maintainers serve until resignation or removal, or
-for fixed terms with renewal.
-
-**TSC elections.** How many voting seats the TSC has, the length of a term and whether terms
-are staggered, how often elections are held and when the first one takes place, how the
-Maintainer electorate is counted, the voting method, and whether a mid-term vacancy is
-filled by special election or left open until the next election. These need to be settled
-before the first election, which ends the terms of the members appointed at inception.
-
-**Company and affiliate caps.** Whether a limit applies to how many TSC voting seats a
-single company and its affiliates may hold, what the limit is, and how a breach is resolved
-when it arises through an affiliation change rather than a new seating. The founding group
-has proposed a cap of two voting seats per company, moved here from an earlier charter
-draft, for the TSC to confirm and word.
-
-Policies on how the TSC itself operates, such as chair election, voting practice, attendance,
-conflicts of interest, working groups, and releases, are kept in the
-[governance repository](https://github.com/opendckit/governance/tree/main/policies).
 
 ## Changing this file
 
