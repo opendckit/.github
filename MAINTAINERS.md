@@ -17,13 +17,13 @@ Every repository in the OpenDCKit organization keeps its own copy of this file.
 
 | Name | GitHub | Affiliation | Areas |
 | ---- | ------ | ----------- | ----- |
-|      |        |             |       |
+| Casey Cain | wrathwolf | The Linux Foundation | All |
 
 ## Emeritus
 
 | Name | GitHub | Period |
 | ---- | ------ | ------ |
-|      |        |        |
+|  |  |  |
 
 ## Changes to this list
 
